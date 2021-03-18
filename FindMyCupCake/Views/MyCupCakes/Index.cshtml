@@ -1,0 +1,69 @@
+﻿@model IEnumerable<FindMyCupCake.Models.MyCupCake>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.travelto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.travelfrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TypeOfTransport)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PricePerKm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PricePerhr)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Distance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duration)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.travelto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.travelfrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeOfTransport)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PricePerKm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PricePerhr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Distance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Duration)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MyCupCakeId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MyCupCakeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MyCupCakeId })
+        </td>
+    </tr>
+}
+
+</table>

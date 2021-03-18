@@ -1,0 +1,74 @@
+﻿@model FindMyCupCake.Models.MyCupCake
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MyCupCake</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.travelto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.travelto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.travelfrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.travelfrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeOfTransport)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TypeOfTransport)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerKm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerKm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerhr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerhr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Distance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Distance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duration)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MyCupCakeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
